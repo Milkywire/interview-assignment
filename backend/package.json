@@ -1,0 +1,22 @@
+{
+  "name": "impacter-posts-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init-db": "knex migrate:latest && knex seed:run",
+    "reset-db": "knex migrate:rollback && knex migrate:latest && knex seed:run"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "knex": "^0.20.2",
+    "lorem-ipsum": "^2.0.3",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

@@ -1,0 +1,19 @@
+version: '3'
+services:
+  postgreSQL:
+    image: sameersbn/postgresql:10
+    container_name: impacter-posts-db
+    restart: always
+    volumes:
+      - postgresql:/var/lib/postgresql
+    ports:
+      - "5435:5432"
+    environment:
+      - DEBUG=false
+      - DB_USER=dev
+      - DB_PASS=dev
+      - DB_NAME=impacter-posts-dev
+      - PG_PASSWORD=dev
+
+volumes:
+  postgresql: 
