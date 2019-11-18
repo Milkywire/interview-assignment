@@ -15,7 +15,7 @@ We provided a small api for you to use during the development. The api runs on [
 
 `POST /upload` - Upload a new image and get a url back
 
-If you want to api to generate new data remove the data.json file. Please be aware that this will be done by the server on the next start and the server will not start until it's done.
+If you want the api to generate new data remove the data.json file. Please be aware that this will be done by the server on the next start and the server will not start until it's done.
 
 ## Available Scripts
 
