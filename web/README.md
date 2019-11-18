@@ -1,12 +1,29 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## API
+We provided a small api for you to use during the development. The api runs on [http://localhost:3001](http://localhost:3001).
+
+
+`GET /impacters` - List all impacters
+`GET /impacters/:id` - Get a impacter
+
+`GET /posts` - List all posts
+`POST /posts` - Create a new post
+`GET /posts/:id` - Get a post
+`PUT /posts/:id` - Update a post
+`DELETE /posts/:id` - Delete a post
+
+`POST /upload` - Upload a new image and get a url back
+
+If you want to api to generate new data remove the data.json file. Please be aware that this will be done by the server on the next start and the server will not start until it's done.
+
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
+Runs the app and the api in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
