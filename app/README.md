@@ -1,0 +1,2 @@
+# Getting started
+This project is generated with `react-native init` for more information about this setup, pleas have look at the [official docs](https://facebook.github.io/react-native/docs/getting-started) 
