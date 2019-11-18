@@ -37,7 +37,6 @@
     "fastify-multipart": "^1.0.2",
     "fastify-static": "^2.5.0",
     "lorem-ipsum": "^2.0.3",
-    "promise-wip-throttler": "^0.2.1",
     "pump": "^3.0.0",
     "uuid": "^3.3.3"
   }
