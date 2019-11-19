@@ -8,7 +8,9 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"npm:api\" \"npm:app\"",
+    "app": "react-scripts start",
+    "api": "node mock/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -27,5 +29,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "fastify": "^2.10.0",
+    "fastify-cors": "^2.2.0",
+    "fastify-multipart": "^1.0.2",
+    "fastify-static": "^2.5.0",
+    "lorem-ipsum": "^2.0.3",
+    "pump": "^3.0.0",
+    "uuid": "^3.3.3"
   }
 }

@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "start": "concurrently \"npm:api\" \"npm:app\"",
+    "api": "node mock/server.js",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start",
+    "app": "react-native start",
     "test": "jest",
     "lint": "eslint ."
   },
@@ -19,9 +21,17 @@
     "@react-native-community/eslint-config": "0.0.5",
     "babel-jest": "24.9.0",
     "eslint": "6.6.0",
+    "fastify": "^2.10.0",
+    "fastify-cors": "^2.2.0",
+    "fastify-multipart": "^1.0.2",
+    "fastify-static": "^2.5.0",
     "jest": "24.9.0",
     "metro-react-native-babel-preset": "0.56.3",
-    "react-test-renderer": "16.9.0"
+    "react-test-renderer": "16.9.0",
+    "concurrently": "^5.0.0",
+    "lorem-ipsum": "^2.0.3",
+    "pump": "^3.0.0",
+    "uuid": "^3.3.3"
   },
   "jest": {
     "preset": "react-native"

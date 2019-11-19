@@ -11,7 +11,7 @@ We don't expect you to do all implementation, instead we want you select the par
 
 The goal of this assignment is not to make a perfect solution, it is to act as a starting point for a technical discussion during the interview.
 
-Please cover parts of the project with tests. Think about how you structure your files and folders, maintain good naming conventions, pick libraries for common tasks etc. Write the code as if this project would extend to more functionality and be maintainable by a team. Also write down the trade offs and decisions you have made, stuff you left out (if any), what would you do if you had more time etc. And bring these notes to the interview.
+Please cover parts of the project with tests. Think about how you structure your files and folders, maintain good naming conventions, pick libraries for common tasks etc. Write the code as if this project would extend to more functionality and be maintainable by a team. Also write down the trade offs and decisions you have made, stuff you left out (if any), what would you do if you had more time etc. Be sure to bring these notes to the interview.
 
 And again if you have any doubts or questions, feel free to bring them up at any time before or during the interview.
 
