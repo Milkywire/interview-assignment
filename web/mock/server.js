@@ -13,7 +13,7 @@ async function createMockData() {
     impacters = await createImpacters(19);
     posts = await createPosts(impacters, 50);
     fs.writeFileSync(
-      "./data.json",
+      "./mock/data.json",
       JSON.stringify({
         impacters,
         posts
@@ -26,7 +26,7 @@ async function createMockData() {
 
 async function loadMockData() {
   try {
-    const data = JSON.parse(fs.readFileSync("./data.json"));
+    const data = await require("./data.json");
     impacters = data.impacters;
     posts = data.posts;
   } catch (error) {

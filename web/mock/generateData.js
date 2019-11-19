@@ -47,7 +47,6 @@ async function createImpacters(numberOfImpacters) {
       name: loremIpsum({ count: 2, units: "word" }),
       bio: loremIpsum({ count: 10 }),
       profile_image: images[index].download_url,
-      status: "ACTIVE"
     });
   }
 
@@ -77,7 +76,6 @@ async function createPosts(impacters, numberOfPostsPerImpacter) {
               }
             ]
           },
-          status: "VISIBLE",
           impacter_id: id
         });
       } catch (error) {
