@@ -55,9 +55,9 @@ If you feel you have the time, you can also add support for the user to create a
 
 ## Web
 
-We need an web site for our impacters to administer their posts.
+We need a web site for our impacters to administer their posts.
 
-Create an web site, the user should be able to
+Create a web site, the user should be able to
 
 - see all posts
 - open a post in a modal by clicking the post
