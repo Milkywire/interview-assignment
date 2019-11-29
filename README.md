@@ -22,6 +22,8 @@ Besides the assignment itself, please:
 
 3. Write down the trade-offs and decisions you have made, stuff you left out (if any), what you would do if you had more time etc. Please also submit this together with the rest of the assignment (eg. in the Readme of your submission repository).
 
+And again if you have any doubts or questions, feel free to bring them up with us at any time. You can reach us at work@milkywire.com.
+
 # Assignments (choose one of them)
 
 ## Backend
@@ -65,4 +67,4 @@ Create a web site, the user should be able to
 - update a post
 - delete a post
 
-If you feel you have the time, you can also add support for the user to create a new post by uploading a new image to the API (you can skip the backend implementation if you want to).
+If you feel you have the time, you can also add support for the user to create a new post by uploading a new image to the API.
