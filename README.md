@@ -34,6 +34,7 @@ Create an api using Node.js, the user of the api should be able to
 
 - Get all posts
 - Get all posts for a specific impacter
+- Get a post by id
 - Update a post
 - Delete a post
 
@@ -48,10 +49,12 @@ We need an app for our impacters to administer their posts.
 Create an app using React Native, the user should be able to
 
 - see all posts
-- open a post in full screen by clicking the post
-- go to the next post in full screen mode
 - update a post
 - delete a post
+- open a post in full screen by clicking the post
+- go to the next post in full screen mode
+- delete and update a post in full screen mode
+
 
 If you feel you have the time, you can also add support for the user to create a new post by uploading a new image to the API.
 
@@ -62,9 +65,11 @@ We need a web site for our impacters to administer their posts.
 Create a web site, the user should be able to
 
 - see all posts
-- open a post in a modal by clicking the post
-- go to the next post in full screen mode
 - update a post
 - delete a post
+- open a post in a modal by clicking the post
+- go to the next and previous post in modal mode
+- delete and update a post in modal mode
+
 
 If you feel you have the time, you can also add support for the user to create a new post by uploading a new image to the API.

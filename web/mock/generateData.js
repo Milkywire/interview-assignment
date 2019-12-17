@@ -46,7 +46,7 @@ async function createImpacters(numberOfImpacters) {
       id: index,
       name: loremIpsum({ count: 2, units: "word" }),
       bio: loremIpsum({ count: 10 }),
-      profile_image: images[index].download_url,
+      profile_image: images[index].download_url
     });
   }
 
@@ -63,6 +63,7 @@ async function createPosts(impacters, numberOfPostsPerImpacter) {
       try {
         const { download_url, width, height, author } = images[index];
         result.push({
+          id: result.length,
           type: "IMAGES",
           description: loremIpsum({ count: 10, units: "word" }),
           data: {
