@@ -18,9 +18,11 @@ Besides the assignment itself, please:
 
 1. Submit the assignment as a repository on github
 
-2. Cover parts of the project with tests. Think about how you structure your files and folders, maintain good naming conventions, pick libraries for common tasks etc. Write the code as if this project would be extended with more functionality and be maintained by a team.
+2. Cover parts of the project with tests. 
 
-3. Write down the trade-offs and decisions you have made, stuff you left out (if any), what you would do if you had more time etc. Please also submit this together with the rest of the assignment (eg. in the Readme of your submission repository).
+3. Think about how you structure your files and folders, maintain good naming conventions, pick libraries for common tasks etc. Write the code as if this project would be extended with more functionality and be maintained by a team.
+
+4. Write down the trade-offs and decisions you have made, stuff you left out (if any), what you would do if you had more time etc. Please also submit this together with the rest of the assignment (eg. in the Readme of your submission repository).
 
 And again if you have any doubts or questions, feel free to bring them up with us at any time. You can reach us at work@milkywire.com.
 
