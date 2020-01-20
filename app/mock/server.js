@@ -26,7 +26,7 @@ async function createMockData() {
 
 async function loadMockData() {
   try {
-    const data = await require("./data.json");
+    const data = await require("./data.json.js");
     impacters = data.impacters;
     posts = data.posts;
   } catch (error) {
@@ -50,10 +50,29 @@ fastify.get("/", async (request, reply) => {
 });
 
 fastify.get("/impacters", async (request, reply) => impacters);
-fastify.get("/impacters/:id", async (request, reply) =>
-  impacters.find(impacter => impacter.id === request.params.id)
-);
-fastify.get("/posts", async (request, reply) => posts);
+fastify.get("/impacters/:id", async (request, reply) => {
+  const id = request.params.id ? Number.parseInt(request.params.id) : -1;
+
+  return impacters.find(impacter => impacter.id === id);
+});
+
+fastify.get("/impacters/:id/posts", async (request, reply) => {
+  const id = request.params.id ? Number.parseInt(request.params.id) : -1;
+
+  return posts.filter(post => post.impacter_id === id);
+});
+
+fastify.get("/posts", async (request, reply) => {
+  const limit = request.query.limit
+    ? Number.parseInt(request.query.limit)
+    : posts.length;
+  const offset = request.query.limit
+    ? Number.parseInt(request.query.offset)
+    : 0;
+
+  return posts.slice(offset, offset + limit);
+});
+
 fastify.post("/posts", async (request, reply) => {
   const post = request.body;
   post.id = posts.length;
@@ -61,12 +80,15 @@ fastify.post("/posts", async (request, reply) => {
   return post;
 });
 
-fastify.get("/posts/:id", async (request, reply) =>
-  posts.find(post => post.id === request.params.id)
-);
+fastify.get("/posts/:id", async (request, reply) => {
+  const id = request.params.id ? Number.parseInt(request.params.id) : -1;
+
+  return posts.find(post => post.id === id);
+});
 
 fastify.put("/posts/:id", async (request, reply) => {
-  const postIndex = posts.findIndex(post => post.id === request.params.id);
+  const id = request.params.id ? Number.parseInt(request.params.id) : -1;
+  const postIndex = posts.findIndex(post => post.id === id);
   const post = posts[postIndex];
   const updatedPost = {
     ...post,

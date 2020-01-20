@@ -18,9 +18,11 @@ Besides the assignment itself, please:
 
 1. Submit the assignment as a repository on github
 
-2. Cover parts of the project with tests. Think about how you structure your files and folders, maintain good naming conventions, pick libraries for common tasks etc. Write the code as if this project would be extended with more functionality and be maintained by a team.
+2. Cover parts of the project with tests. 
 
-3. Write down the trade-offs and decisions you have made, stuff you left out (if any), what you would do if you had more time etc. Please also submit this together with the rest of the assignment (eg. in the Readme of your submission repository).
+3. Think about how you structure your files and folders, maintain good naming conventions, pick libraries for common tasks etc. Write the code as if this project would be extended with more functionality and be maintained by a team.
+
+4. Write down the trade-offs and decisions you have made, stuff you left out (if any), what you would do if you had more time etc. Please also submit this together with the rest of the assignment (eg. in the Readme of your submission repository).
 
 And again if you have any doubts or questions, feel free to bring them up with us at any time. You can reach us at work@milkywire.com.
 
@@ -34,6 +36,7 @@ Create an api using Node.js, the user of the api should be able to
 
 - Get all posts
 - Get all posts for a specific impacter
+- Get a post by id
 - Update a post
 - Delete a post
 
@@ -48,10 +51,12 @@ We need an app for our impacters to administer their posts.
 Create an app using React Native, the user should be able to
 
 - see all posts
-- open a post in full screen by clicking the post
-- go to the next post in full screen mode
 - update a post
 - delete a post
+- open a post in full screen by clicking the post
+- go to the next post in full screen mode
+- delete and update a post in full screen mode
+
 
 If you feel you have the time, you can also add support for the user to create a new post by uploading a new image to the API.
 
@@ -62,9 +67,11 @@ We need a web site for our impacters to administer their posts.
 Create a web site, the user should be able to
 
 - see all posts
-- open a post in a modal by clicking the post
-- go to the next post in full screen mode
 - update a post
 - delete a post
+- open a post in a modal by clicking the post
+- go to the next and previous post in modal mode
+- delete and update a post in modal mode
+
 
 If you feel you have the time, you can also add support for the user to create a new post by uploading a new image to the API.
