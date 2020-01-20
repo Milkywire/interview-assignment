@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## API
 
-We provided a small api for you to use during the development. The api runs on [http://localhost:3001](http://localhost:3001).
+We provided a small api for you to use during the development. The api runs on [http://localhost:3001](http://localhost:3001). Below you can find a list of all endpoints. You can find the swagger documentation for the api at [http://localhost:3001/docs](http://localhost:3001/docs)
 
 `GET /impacters` - List all impacters
 
