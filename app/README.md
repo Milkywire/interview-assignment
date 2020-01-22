@@ -1,5 +1,23 @@
+## Assignment
+
+We need an app for our impacters to administer their posts.
+
+Create an app using React Native, the user should be able to
+
+- see all posts
+- update a post
+- delete a post
+- open a post in full screen by clicking the post
+- go to the next post in full screen mode
+- delete and update a post in full screen mode
+
+If you feel you have the time, you can also add support for the user to create a new post by uploading a new image to the API.
+
+**Make sure to write down what you would have done if you had more time, and submit it together with the rest of the assignment.**
+
 # Getting started
-This project is generated with `react-native init` for more information about this setup, pleas have look at the [official docs](https://facebook.github.io/react-native/docs/getting-started) 
+
+This project is generated with `react-native init` for more information about this setup, pleas have look at the [official docs](https://facebook.github.io/react-native/docs/getting-started)
 
 ## API
 
