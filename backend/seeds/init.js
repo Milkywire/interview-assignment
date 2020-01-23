@@ -91,6 +91,7 @@ exports.seed = async function(knex) {
   const numberOfImpacters = 19;
   const numberOfPostsPerImpacter = 40;
   // Deletes ALL existing entries
+  await knex("co_posts").del();
   await knex("co_impacters").del();
   // Inserts seed impacters
   const impacters = await createImpacters(numberOfImpacters);
