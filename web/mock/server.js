@@ -226,7 +226,7 @@ fastify.get(
     const limit = request.query.limit
       ? Number.parseInt(request.query.limit)
       : posts.length;
-    const offset = request.query.limit
+    const offset = request.query.offset
       ? Number.parseInt(request.query.offset)
       : 0;
 
