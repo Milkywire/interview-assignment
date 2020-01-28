@@ -37,6 +37,7 @@
     "fastify-multipart": "^1.0.2",
     "fastify-static": "^2.5.0",
     "fastify-swagger": "^2.5.0",
+    "http-errors": "^1.7.3",
     "lorem-ipsum": "^2.0.3",
     "pump": "^3.0.0",
     "uuid": "^3.3.3"

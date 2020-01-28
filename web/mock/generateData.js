@@ -1,5 +1,6 @@
 const loremIpsum = require('lorem-ipsum').loremIpsum;
 const https = require('https');
+const uuidv4 = require('uuid').v4;
 
 function wait(timeToWait) {
   return new Promise(function(resolve) {
@@ -43,7 +44,7 @@ async function createImpacters(numberOfImpacters) {
   const images = await getImages(numberOfImpacters);
   for (let index = 0; index < numberOfImpacters; index++) {
     impacters.push({
-      id: index,
+      id: uuidv4(),
       name: loremIpsum({count: 2, units: 'word'}),
       bio: loremIpsum({count: 10}),
       profile_image: images[index].download_url,
@@ -63,7 +64,7 @@ async function createPosts(impacters, numberOfPostsPerImpacter) {
       try {
         const {download_url, width, height, author} = images[index];
         result.push({
-          id: result.length,
+          id: uuidv4(),
           type: 'IMAGES',
           description: loremIpsum({count: 10, units: 'word'}),
           data: {

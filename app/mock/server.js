@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const pump = require('pump');
 const uuidv4 = require('uuid').v4;
+const {NotFound} = require('http-errors');
 const {createImpacters, createPosts} = require('./generateData');
 
 let impacters = [];
@@ -11,7 +12,7 @@ let posts = [];
 const impacterResource = {
   type: 'object',
   properties: {
-    id: {type: 'number'},
+    id: {type: 'string'},
     name: {type: 'string'},
     bio: {type: 'string'},
     profile_image: {type: 'string'},
@@ -21,7 +22,7 @@ const impacterResource = {
 const postResource = {
   type: 'object',
   properties: {
-    id: {type: 'number'},
+    id: {type: 'string'},
     type: {type: 'string'},
     description: {type: 'string'},
     impacter_id: {type: 'string'},
@@ -155,6 +156,7 @@ fastify.get(
   },
   async (request, reply) => impacters,
 );
+
 fastify.get(
   '/impacters/:id',
   {
@@ -168,9 +170,14 @@ fastify.get(
     },
   },
   async (request, reply) => {
-    const id = request.params.id ? Number.parseInt(request.params.id) : -1;
+    const {id} = request.params;
+    const impacterIndex = impacters.findIndex(impacter => impacter.id === id);
 
-    return impacters.find(impacter => impacter.id === id);
+    if (impacterIndex === -1) {
+      throw new NotFound(`Could not find impacter with id: ${id}`);
+    }
+
+    return impacters[impacterIndex];
   },
 );
 
@@ -192,8 +199,7 @@ fastify.get(
     },
   },
   async (request, reply) => {
-    const id = request.params.id ? Number.parseInt(request.params.id) : -1;
-
+    const {id} = request.params;
     return posts.filter(post => post.impacter_id === id);
   },
 );
@@ -240,7 +246,7 @@ fastify.post(
   },
   async (request, reply) => {
     const post = request.body;
-    post.id = posts.length;
+    post.id = uuidv4();
     posts.push(post);
     return post;
   },
@@ -259,9 +265,14 @@ fastify.get(
     },
   },
   async (request, reply) => {
-    const id = request.params.id ? Number.parseInt(request.params.id) : -1;
+    const {id} = request.params;
 
-    return posts.find(post => post.id === id);
+    const postIndex = posts.findIndex(post => post.id === id);
+    if (postIndex === -1) {
+      throw new NotFound(`Could not find post with id: ${id}`);
+    }
+
+    return posts[postIndex];
   },
 );
 
@@ -279,8 +290,12 @@ fastify.put(
     },
   },
   async (request, reply) => {
-    const id = request.params.id ? Number.parseInt(request.params.id) : -1;
+    const {id} = request.params;
     const postIndex = posts.findIndex(post => post.id === id);
+    if (postIndex === -1) {
+      throw new NotFound(`Could not find post with id: ${id}`);
+    }
+
     const post = posts[postIndex];
     const updatedPost = {
       ...post,
@@ -309,7 +324,11 @@ fastify.delete(
     },
   },
   async (request, reply) => {
-    const postIndex = posts.findIndex(post => post.id === request.params.id);
+    const {id} = request.params;
+    const postIndex = posts.findIndex(post => post.id === id);
+    if (postIndex === -1) {
+      throw new NotFound(`Could not find post with id: ${id}`);
+    }
     posts.splice(postIndex, 1);
     reply.status(204);
     return;
