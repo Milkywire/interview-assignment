@@ -1,4 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Assignment
+
+We need a web site for our impacters to administer their posts.
+
+Create a web site, the user should be able to
+
+- see all posts
+- update a post
+- delete a post
+- open a post in a modal by clicking the post
+- go to the next and previous post in modal mode
+- delete and update a post in modal mode
+
+If you feel you have the time, you can also add support for the user to create a new post by uploading a new image to the API.
+
+**Make sure to write down what you would have done if you had more time, and submit it together with the rest of the assignment.**
 
 ## API
 
