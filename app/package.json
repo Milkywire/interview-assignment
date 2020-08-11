@@ -21,7 +21,7 @@
     "@react-native-community/eslint-config": "0.0.5",
     "babel-jest": "24.9.0",
     "eslint": "6.6.0",
-    "fastify": "^2.10.0",
+    "fastify": "^2.15.1",
     "fastify-cors": "^2.2.0",
     "fastify-multipart": "^1.0.2",
     "fastify-static": "^2.5.0",
