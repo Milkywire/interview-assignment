@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "",
   "dependencies": {
-    "knex": "^0.20.2",
+    "knex": "^2.4.0",
     "lorem-ipsum": "^2.0.3",
     "pg": "^7.12.1"
   },
